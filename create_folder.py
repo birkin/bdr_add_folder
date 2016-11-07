@@ -37,7 +37,7 @@ def runCode():
         # 'description': 'folder_description_here',
         'parent_folders': PARENT_FOLDERS,
         }
-    r = requests.post( settings.FOLDER_API_URL, data=payload, verify=False )
+    r = requests.post( FOLDER_API_URL, data=payload, verify=False )
     json_string = r.content.decode( 'utf-8' )
     log.debug( 'json_string, ```{}```'.format(json_string) )
     log.debug( '-- END OF SCRIPT --' )
